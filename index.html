@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe - Play with Friends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Tic-Tac-Toe</h1>
+            <p>Classic Game for Two Players</p>
+        </div>
+
+        <div class="game-info">
+            <div class="status">
+                <h2 id="status-text">Player X's Turn</h2>
+                <p id="sub-status"></p>
+            </div>
+            
+            <div class="score-board">
+                <div class="score">
+                    <span>X Wins:</span>
+                    <strong id="x-score">0</strong>
+                </div>
+                <div class="score">
+                    <span>O Wins:</span>
+                    <strong id="o-score">0</strong>
+                </div>
+                <div class="score">
+                    <span>Draws:</span>
+                    <strong id="draws">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn" class="btn btn-primary">🔄 New Game</button>
+            <button id="reset-score-btn" class="btn btn-secondary">↺ Reset Score</button>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <ul>
+                <li>Players take turns clicking on empty squares</li>
+                <li>Player X goes first</li>
+                <li>Get 3 in a row (horizontal, vertical, or diagonal) to win</li>
+                <li>Click "New Game" to play again</li>
+            </ul>
+        </div>
+
+        <div class="share-section">
+            <p>📱 Share this link with your friends to play online:</p>
+            <div class="share-box">
+                <input type="text" id="share-link" readonly>
+                <button id="copy-btn" class="btn btn-small">📋 Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
